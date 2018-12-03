@@ -67,7 +67,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="idSiniestroLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="idPolizaLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="fechaHoraLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="fechaLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="calleLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="numCalleLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="coloniaLabel" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -79,7 +79,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="idSiniestroField" alignment="0" pref="315" max="32767" attributes="0"/>
                   <Component id="idPolizaField" alignment="0" pref="315" max="32767" attributes="0"/>
-                  <Component id="fechaHoraField" alignment="0" pref="315" max="32767" attributes="0"/>
+                  <Component id="fechaField" alignment="0" pref="315" max="32767" attributes="0"/>
                   <Component id="calleField" alignment="0" pref="315" max="32767" attributes="0"/>
                   <Component id="numCalleField" alignment="0" pref="315" max="32767" attributes="0"/>
                   <Component id="coloniaField" alignment="0" pref="315" max="32767" attributes="0"/>
@@ -113,8 +113,8 @@
               </Group>
               <EmptySpace min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="fechaHoraLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="fechaHoraField" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="fechaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="fechaField" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -177,9 +177,9 @@
                 <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="1"/>
                 <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Integer.class"/>
               </Subbinding>
-              <Subbinding sourcePath="${fechaHora}">
+              <Subbinding sourcePath="${fecha}">
                 <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="2"/>
-                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="java.util.Date.class"/>
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
               </Subbinding>
               <Subbinding sourcePath="${calle}">
                 <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="3"/>
@@ -224,9 +224,9 @@
         <Property name="text" type="java.lang.String" value="Id Poliza:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="fechaHoraLabel">
+    <Component class="javax.swing.JLabel" name="fechaLabel">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Fecha Hora:"/>
+        <Property name="text" type="java.lang.String" value="Fecha:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="calleLabel">
@@ -275,12 +275,12 @@
         <BindingProperty name="enabled" source="masterTable" sourcePath="${selectedElement != null}" target="idPolizaField" targetPath="enabled" updateStrategy="1" immediately="false"/>
       </BindingProperties>
     </Component>
-    <Component class="javax.swing.JTextField" name="fechaHoraField">
+    <Component class="javax.swing.JTextField" name="fechaField">
       <BindingProperties>
-        <BindingProperty name="text" source="masterTable" sourcePath="${selectedElement.fechaHora}" target="fechaHoraField" targetPath="text" updateStrategy="0" immediately="false">
+        <BindingProperty name="text" source="masterTable" sourcePath="${selectedElement.fecha}" target="fechaField" targetPath="text" updateStrategy="0" immediately="false">
           <Property name="incompletePathValue" type="java.lang.String" value="null"/>
         </BindingProperty>
-        <BindingProperty name="enabled" source="masterTable" sourcePath="${selectedElement != null}" target="fechaHoraField" targetPath="enabled" updateStrategy="1" immediately="false"/>
+        <BindingProperty name="enabled" source="masterTable" sourcePath="${selectedElement != null}" target="fechaField" targetPath="enabled" updateStrategy="1" immediately="false"/>
       </BindingProperties>
     </Component>
     <Component class="javax.swing.JTextField" name="calleField">

@@ -8,7 +8,6 @@ package conectabase;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 import java.io.Serializable;
-import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -18,8 +17,6 @@ import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 
 /**
@@ -32,7 +29,7 @@ import javax.persistence.Transient;
     @NamedQuery(name = "SSiniestros.findAll", query = "SELECT s FROM SSiniestros s")
     , @NamedQuery(name = "SSiniestros.findByIdSiniestro", query = "SELECT s FROM SSiniestros s WHERE s.idSiniestro = :idSiniestro")
     , @NamedQuery(name = "SSiniestros.findByIdPoliza", query = "SELECT s FROM SSiniestros s WHERE s.idPoliza = :idPoliza")
-    , @NamedQuery(name = "SSiniestros.findByFechaHora", query = "SELECT s FROM SSiniestros s WHERE s.fechaHora = :fechaHora")
+    , @NamedQuery(name = "SSiniestros.findByFecha", query = "SELECT s FROM SSiniestros s WHERE s.fecha = :fecha")
     , @NamedQuery(name = "SSiniestros.findByCalle", query = "SELECT s FROM SSiniestros s WHERE s.calle = :calle")
     , @NamedQuery(name = "SSiniestros.findByNumCalle", query = "SELECT s FROM SSiniestros s WHERE s.numCalle = :numCalle")
     , @NamedQuery(name = "SSiniestros.findByColonia", query = "SELECT s FROM SSiniestros s WHERE s.colonia = :colonia")
@@ -53,9 +50,8 @@ public class SSiniestros implements Serializable {
     @Column(name = "id_poliza")
     private Integer idPoliza;
     @Basic(optional = false)
-    @Column(name = "fecha_hora")
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date fechaHora;
+    @Column(name = "fecha")
+    private String fecha;
     @Basic(optional = false)
     @Column(name = "calle")
     private String calle;
@@ -81,9 +77,9 @@ public class SSiniestros implements Serializable {
         this.idSiniestro = idSiniestro;
     }
 
-    public SSiniestros(Integer idSiniestro, Date fechaHora, String calle, int numCalle, String colonia, String delegacion, String estado) {
+    public SSiniestros(Integer idSiniestro, String fecha, String calle, int numCalle, String colonia, String delegacion, String estado) {
         this.idSiniestro = idSiniestro;
-        this.fechaHora = fechaHora;
+        this.fecha = fecha;
         this.calle = calle;
         this.numCalle = numCalle;
         this.colonia = colonia;
@@ -111,14 +107,14 @@ public class SSiniestros implements Serializable {
         changeSupport.firePropertyChange("idPoliza", oldIdPoliza, idPoliza);
     }
 
-    public Date getFechaHora() {
-        return fechaHora;
+    public String getFecha() {
+        return fecha;
     }
 
-    public void setFechaHora(Date fechaHora) {
-        Date oldFechaHora = this.fechaHora;
-        this.fechaHora = fechaHora;
-        changeSupport.firePropertyChange("fechaHora", oldFechaHora, fechaHora);
+    public void setFecha(String fecha) {
+        String oldFecha = this.fecha;
+        this.fecha = fecha;
+        changeSupport.firePropertyChange("fecha", oldFecha, fecha);
     }
 
     public String getCalle() {

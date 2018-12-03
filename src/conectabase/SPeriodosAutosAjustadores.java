@@ -8,7 +8,6 @@ package conectabase;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 import java.io.Serializable;
-import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -18,8 +17,6 @@ import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 
 /**
@@ -50,12 +47,10 @@ public class SPeriodosAutosAjustadores implements Serializable {
     private Integer idAjustador;
     @Basic(optional = false)
     @Column(name = "fecha_inicio")
-    @Temporal(TemporalType.DATE)
-    private Date fechaInicio;
+    private String fechaInicio;
     @Basic(optional = false)
     @Column(name = "fecha_fin")
-    @Temporal(TemporalType.DATE)
-    private Date fechaFin;
+    private String fechaFin;
     @Basic(optional = false)
     @Column(name = "posicion")
     private String posicion;
@@ -67,7 +62,7 @@ public class SPeriodosAutosAjustadores implements Serializable {
         this.idVehiculoAjustadores = idVehiculoAjustadores;
     }
 
-    public SPeriodosAutosAjustadores(Integer idVehiculoAjustadores, Date fechaInicio, Date fechaFin, String posicion) {
+    public SPeriodosAutosAjustadores(Integer idVehiculoAjustadores, String fechaInicio, String fechaFin, String posicion) {
         this.idVehiculoAjustadores = idVehiculoAjustadores;
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
@@ -94,22 +89,22 @@ public class SPeriodosAutosAjustadores implements Serializable {
         changeSupport.firePropertyChange("idAjustador", oldIdAjustador, idAjustador);
     }
 
-    public Date getFechaInicio() {
+    public String getFechaInicio() {
         return fechaInicio;
     }
 
-    public void setFechaInicio(Date fechaInicio) {
-        Date oldFechaInicio = this.fechaInicio;
+    public void setFechaInicio(String fechaInicio) {
+        String oldFechaInicio = this.fechaInicio;
         this.fechaInicio = fechaInicio;
         changeSupport.firePropertyChange("fechaInicio", oldFechaInicio, fechaInicio);
     }
 
-    public Date getFechaFin() {
+    public String getFechaFin() {
         return fechaFin;
     }
 
-    public void setFechaFin(Date fechaFin) {
-        Date oldFechaFin = this.fechaFin;
+    public void setFechaFin(String fechaFin) {
+        String oldFechaFin = this.fechaFin;
         this.fechaFin = fechaFin;
         changeSupport.firePropertyChange("fechaFin", oldFechaFin, fechaFin);
     }

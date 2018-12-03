@@ -52,44 +52,41 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <Component id="newButton" linkSize="1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="deleteButton" linkSize="1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="refreshButton" linkSize="1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="saveButton" linkSize="1" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="idVehiculoAjustadoresLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="marcaLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="modeloLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="anioLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="kilometrajeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="placasLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="idVehiculoAjustadoresField" alignment="0" pref="315" max="32767" attributes="0"/>
-                                  <Component id="marcaField" alignment="0" pref="315" max="32767" attributes="0"/>
-                                  <Component id="modeloField" alignment="0" pref="315" max="32767" attributes="0"/>
-                                  <Component id="anioField" alignment="0" pref="315" max="32767" attributes="0"/>
-                                  <Component id="kilometrajeField" alignment="0" pref="315" max="32767" attributes="0"/>
-                                  <Component id="placasField" alignment="0" pref="315" max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Component id="masterScrollPane" pref="380" max="32767" attributes="0"/>
-                      </Group>
-                  </Group>
-              </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <Component id="newButton" linkSize="1" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
+              <Component id="deleteButton" linkSize="1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="refreshButton" linkSize="1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="saveButton" linkSize="1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" attributes="0">
+              <EmptySpace min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="idVehiculoAjustadoresLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="marcaLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="modeloLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="anioLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="kilometrajeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="placasLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="idVehiculoAjustadoresField" alignment="0" pref="315" max="32767" attributes="0"/>
+                  <Component id="marcaField" alignment="0" pref="315" max="32767" attributes="0"/>
+                  <Component id="modeloField" alignment="0" pref="315" max="32767" attributes="0"/>
+                  <Component id="anioField" alignment="0" pref="315" max="32767" attributes="0"/>
+                  <Component id="kilometrajeField" alignment="0" pref="315" max="32767" attributes="0"/>
+                  <Component id="placasField" alignment="0" pref="315" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" attributes="0">
+              <EmptySpace min="-2" max="-2" attributes="0"/>
+              <Component id="masterScrollPane" pref="380" max="32767" attributes="0"/>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -165,7 +162,7 @@
               </Subbinding>
               <Subbinding sourcePath="${anio}">
                 <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="3"/>
-                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="java.util.Date.class"/>
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
               </Subbinding>
               <Subbinding sourcePath="${kilometraje}">
                 <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="4"/>

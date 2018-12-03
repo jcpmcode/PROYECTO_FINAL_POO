@@ -9,7 +9,6 @@ import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -19,8 +18,6 @@ import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 
 /**
@@ -56,8 +53,7 @@ public class SVehiculosAjustadores implements Serializable {
     private String modelo;
     @Basic(optional = false)
     @Column(name = "anio")
-    @Temporal(TemporalType.DATE)
-    private Date anio;
+    private String anio;
     // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
     @Basic(optional = false)
     @Column(name = "kilometraje")
@@ -73,7 +69,7 @@ public class SVehiculosAjustadores implements Serializable {
         this.idVehiculoAjustadores = idVehiculoAjustadores;
     }
 
-    public SVehiculosAjustadores(Integer idVehiculoAjustadores, String marca, String modelo, Date anio, BigDecimal kilometraje, String placas) {
+    public SVehiculosAjustadores(Integer idVehiculoAjustadores, String marca, String modelo, String anio, BigDecimal kilometraje, String placas) {
         this.idVehiculoAjustadores = idVehiculoAjustadores;
         this.marca = marca;
         this.modelo = modelo;
@@ -112,12 +108,12 @@ public class SVehiculosAjustadores implements Serializable {
         changeSupport.firePropertyChange("modelo", oldModelo, modelo);
     }
 
-    public Date getAnio() {
+    public String getAnio() {
         return anio;
     }
 
-    public void setAnio(Date anio) {
-        Date oldAnio = this.anio;
+    public void setAnio(String anio) {
+        String oldAnio = this.anio;
         this.anio = anio;
         changeSupport.firePropertyChange("anio", oldAnio, anio);
     }

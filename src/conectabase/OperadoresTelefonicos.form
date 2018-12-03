@@ -191,7 +191,7 @@
               </Subbinding>
               <Subbinding sourcePath="${fechaNacimiento}">
                 <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="5"/>
-                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="java.util.Date.class"/>
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
               </Subbinding>
               <Subbinding sourcePath="${direccion}">
                 <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="6"/>

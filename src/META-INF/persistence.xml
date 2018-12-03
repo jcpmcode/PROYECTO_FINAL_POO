@@ -4,13 +4,13 @@
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>conectabase.SAjustadores</class>
     <class>conectabase.PArchivos</class>
-    <class>conectabase.SOperadoresTelefonicos</class>
     <class>conectabase.SPeriodosAutosAjustadores</class>
     <class>conectabase.SPolizas</class>
     <class>conectabase.SSiniestros</class>
     <class>conectabase.SVehiculosAjustadores</class>
     <class>conectabase.SUsuariosAjustadores</class>
     <class>conectabase.SUsuariosOperadores</class>
+    <class>conectabase.SOperadoresTelefonicos</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/ic16jpm?zeroDateTimeBehavior=convertToNull"/>
       <property name="javax.persistence.jdbc.user" value="root"/>

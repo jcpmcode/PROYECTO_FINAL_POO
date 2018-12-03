@@ -52,49 +52,52 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <Component id="newButton" linkSize="1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="deleteButton" linkSize="1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="refreshButton" linkSize="1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="saveButton" linkSize="1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-          </Group>
           <Group type="102" attributes="0">
-              <EmptySpace min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="idAjustadorLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="nombreLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="apPaternoLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="apMaternoLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="generoLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="fechaNacimientoLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="direccionLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="telefonoPersonalLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="telefonoTrabajoLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="mailLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="newButton" linkSize="1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="deleteButton" linkSize="1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="refreshButton" linkSize="1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="saveButton" linkSize="1" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="idAjustadorLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="nombreLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="apPaternoLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="apMaternoLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="generoLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="fechaNacimientoLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="direccionLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="telefonoPersonalLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="telefonoTrabajoLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="mailLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="idAjustadorField" alignment="0" pref="315" max="32767" attributes="0"/>
+                                  <Component id="nombreField" alignment="0" pref="315" max="32767" attributes="0"/>
+                                  <Component id="apPaternoField" alignment="0" pref="315" max="32767" attributes="0"/>
+                                  <Component id="apMaternoField" alignment="0" pref="315" max="32767" attributes="0"/>
+                                  <Component id="generoField" alignment="0" pref="315" max="32767" attributes="0"/>
+                                  <Component id="fechaNacimientoField" alignment="0" pref="315" max="32767" attributes="0"/>
+                                  <Component id="direccionField" alignment="0" pref="315" max="32767" attributes="0"/>
+                                  <Component id="telefonoPersonalField" alignment="0" pref="315" max="32767" attributes="0"/>
+                                  <Component id="telefonoTrabajoField" alignment="0" pref="315" max="32767" attributes="0"/>
+                                  <Component id="mailField" alignment="0" pref="315" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Component id="masterScrollPane" pref="380" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
-              <EmptySpace min="-2" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="idAjustadorField" alignment="0" pref="315" max="32767" attributes="0"/>
-                  <Component id="nombreField" alignment="0" pref="315" max="32767" attributes="0"/>
-                  <Component id="apPaternoField" alignment="0" pref="315" max="32767" attributes="0"/>
-                  <Component id="apMaternoField" alignment="0" pref="315" max="32767" attributes="0"/>
-                  <Component id="generoField" alignment="0" pref="315" max="32767" attributes="0"/>
-                  <Component id="fechaNacimientoField" alignment="0" pref="315" max="32767" attributes="0"/>
-                  <Component id="direccionField" alignment="0" pref="315" max="32767" attributes="0"/>
-                  <Component id="telefonoPersonalField" alignment="0" pref="315" max="32767" attributes="0"/>
-                  <Component id="telefonoTrabajoField" alignment="0" pref="315" max="32767" attributes="0"/>
-                  <Component id="mailField" alignment="0" pref="315" max="32767" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" attributes="0">
-              <EmptySpace min="-2" max="-2" attributes="0"/>
-              <Component id="masterScrollPane" pref="380" max="32767" attributes="0"/>
-              <EmptySpace min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -198,7 +201,7 @@
               </Subbinding>
               <Subbinding sourcePath="${fechaNacimiento}">
                 <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="5"/>
-                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="java.util.Date.class"/>
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
               </Subbinding>
               <Subbinding sourcePath="${direccion}">
                 <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="6"/>
@@ -276,12 +279,18 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="idAjustadorField">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+      </Properties>
       <BindingProperties>
         <BindingProperty name="text" source="masterTable" sourcePath="${selectedElement.idAjustador}" target="idAjustadorField" targetPath="text" updateStrategy="0" immediately="false">
           <Property name="incompletePathValue" type="java.lang.String" value="null"/>
         </BindingProperty>
         <BindingProperty name="enabled" source="masterTable" sourcePath="${selectedElement != null}" target="idAjustadorField" targetPath="enabled" updateStrategy="1" immediately="false"/>
       </BindingProperties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="idAjustadorFieldActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="nombreField">
       <BindingProperties>

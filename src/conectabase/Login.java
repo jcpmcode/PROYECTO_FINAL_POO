@@ -98,7 +98,7 @@ public class Login extends javax.swing.JFrame {
             if (!rs.next()) {
                 System.out.println("Error");
             } else {
-                System.out.println("Ingresaste");
+                System.out.println("Ingresaste");                
             }
         } catch (Exception e) {
             String error = e.toString();

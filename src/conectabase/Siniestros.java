@@ -43,7 +43,7 @@ public class Siniestros extends JPanel {
         masterTable = new javax.swing.JTable();
         idSiniestroLabel = new javax.swing.JLabel();
         idPolizaLabel = new javax.swing.JLabel();
-        fechaHoraLabel = new javax.swing.JLabel();
+        fechaLabel = new javax.swing.JLabel();
         calleLabel = new javax.swing.JLabel();
         numCalleLabel = new javax.swing.JLabel();
         coloniaLabel = new javax.swing.JLabel();
@@ -52,7 +52,7 @@ public class Siniestros extends JPanel {
         idAjustadorLabel = new javax.swing.JLabel();
         idSiniestroField = new javax.swing.JTextField();
         idPolizaField = new javax.swing.JTextField();
-        fechaHoraField = new javax.swing.JTextField();
+        fechaField = new javax.swing.JTextField();
         calleField = new javax.swing.JTextField();
         numCalleField = new javax.swing.JTextField();
         coloniaField = new javax.swing.JTextField();
@@ -73,9 +73,9 @@ public class Siniestros extends JPanel {
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${idPoliza}"));
         columnBinding.setColumnName("Id Poliza");
         columnBinding.setColumnClass(Integer.class);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${fechaHora}"));
-        columnBinding.setColumnName("Fecha Hora");
-        columnBinding.setColumnClass(java.util.Date.class);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${fecha}"));
+        columnBinding.setColumnName("Fecha");
+        columnBinding.setColumnClass(String.class);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${calle}"));
         columnBinding.setColumnName("Calle");
         columnBinding.setColumnClass(String.class);
@@ -102,7 +102,7 @@ public class Siniestros extends JPanel {
 
         idPolizaLabel.setText("Id Poliza:");
 
-        fechaHoraLabel.setText("Fecha Hora:");
+        fechaLabel.setText("Fecha:");
 
         calleLabel.setText("Calle:");
 
@@ -128,10 +128,10 @@ public class Siniestros extends JPanel {
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ, masterTable, org.jdesktop.beansbinding.ELProperty.create("${selectedElement != null}"), idPolizaField, org.jdesktop.beansbinding.BeanProperty.create("enabled"));
         bindingGroup.addBinding(binding);
 
-        binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, masterTable, org.jdesktop.beansbinding.ELProperty.create("${selectedElement.fechaHora}"), fechaHoraField, org.jdesktop.beansbinding.BeanProperty.create("text"));
+        binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, masterTable, org.jdesktop.beansbinding.ELProperty.create("${selectedElement.fecha}"), fechaField, org.jdesktop.beansbinding.BeanProperty.create("text"));
         binding.setSourceUnreadableValue("null");
         bindingGroup.addBinding(binding);
-        binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ, masterTable, org.jdesktop.beansbinding.ELProperty.create("${selectedElement != null}"), fechaHoraField, org.jdesktop.beansbinding.BeanProperty.create("enabled"));
+        binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ, masterTable, org.jdesktop.beansbinding.ELProperty.create("${selectedElement != null}"), fechaField, org.jdesktop.beansbinding.BeanProperty.create("enabled"));
         bindingGroup.addBinding(binding);
 
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, masterTable, org.jdesktop.beansbinding.ELProperty.create("${selectedElement.calle}"), calleField, org.jdesktop.beansbinding.BeanProperty.create("text"));
@@ -204,7 +204,7 @@ public class Siniestros extends JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(idSiniestroLabel)
                     .addComponent(idPolizaLabel)
-                    .addComponent(fechaHoraLabel)
+                    .addComponent(fechaLabel)
                     .addComponent(calleLabel)
                     .addComponent(numCalleLabel)
                     .addComponent(coloniaLabel)
@@ -215,7 +215,7 @@ public class Siniestros extends JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(idSiniestroField, javax.swing.GroupLayout.DEFAULT_SIZE, 315, Short.MAX_VALUE)
                     .addComponent(idPolizaField, javax.swing.GroupLayout.DEFAULT_SIZE, 315, Short.MAX_VALUE)
-                    .addComponent(fechaHoraField, javax.swing.GroupLayout.DEFAULT_SIZE, 315, Short.MAX_VALUE)
+                    .addComponent(fechaField, javax.swing.GroupLayout.DEFAULT_SIZE, 315, Short.MAX_VALUE)
                     .addComponent(calleField, javax.swing.GroupLayout.DEFAULT_SIZE, 315, Short.MAX_VALUE)
                     .addComponent(numCalleField, javax.swing.GroupLayout.DEFAULT_SIZE, 315, Short.MAX_VALUE)
                     .addComponent(coloniaField, javax.swing.GroupLayout.DEFAULT_SIZE, 315, Short.MAX_VALUE)
@@ -246,8 +246,8 @@ public class Siniestros extends JPanel {
                     .addComponent(idPolizaField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(fechaHoraLabel)
-                    .addComponent(fechaHoraField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(fechaLabel)
+                    .addComponent(fechaField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(calleLabel)
@@ -365,8 +365,8 @@ public class Siniestros extends JPanel {
     private javax.persistence.EntityManager entityManager;
     private javax.swing.JTextField estadoField;
     private javax.swing.JLabel estadoLabel;
-    private javax.swing.JTextField fechaHoraField;
-    private javax.swing.JLabel fechaHoraLabel;
+    private javax.swing.JTextField fechaField;
+    private javax.swing.JLabel fechaLabel;
     private javax.swing.JTextField idAjustadorField;
     private javax.swing.JLabel idAjustadorLabel;
     private javax.swing.JTextField idPolizaField;

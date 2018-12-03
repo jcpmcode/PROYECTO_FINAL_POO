@@ -8,7 +8,6 @@ package conectabase;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 import java.io.Serializable;
-import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -18,8 +17,6 @@ import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 
 /**
@@ -64,8 +61,7 @@ public class SOperadoresTelefonicos implements Serializable {
     private String genero;
     @Basic(optional = false)
     @Column(name = "fecha_nacimiento")
-    @Temporal(TemporalType.DATE)
-    private Date fechaNacimiento;
+    private String fechaNacimiento;
     @Basic(optional = false)
     @Column(name = "direccion")
     private String direccion;
@@ -83,7 +79,7 @@ public class SOperadoresTelefonicos implements Serializable {
         this.idOperador = idOperador;
     }
 
-    public SOperadoresTelefonicos(Integer idOperador, String nombre, String apPaterno, String apMaterno, String genero, Date fechaNacimiento, String direccion, int telefonoPersonal, int lineaAsignada) {
+    public SOperadoresTelefonicos(Integer idOperador, String nombre, String apPaterno, String apMaterno, String genero, String fechaNacimiento, String direccion, int telefonoPersonal, int lineaAsignada) {
         this.idOperador = idOperador;
         this.nombre = nombre;
         this.apPaterno = apPaterno;
@@ -145,12 +141,12 @@ public class SOperadoresTelefonicos implements Serializable {
         changeSupport.firePropertyChange("genero", oldGenero, genero);
     }
 
-    public Date getFechaNacimiento() {
+    public String getFechaNacimiento() {
         return fechaNacimiento;
     }
 
-    public void setFechaNacimiento(Date fechaNacimiento) {
-        Date oldFechaNacimiento = this.fechaNacimiento;
+    public void setFechaNacimiento(String fechaNacimiento) {
+        String oldFechaNacimiento = this.fechaNacimiento;
         this.fechaNacimiento = fechaNacimiento;
         changeSupport.firePropertyChange("fechaNacimiento", oldFechaNacimiento, fechaNacimiento);
     }
